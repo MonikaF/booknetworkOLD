@@ -2,3 +2,9 @@
 ---
 
 @import "{{ site.theme }}";
+
+.page-header {
+  color: #ffff;
+  background: #fec7bc; /* Old browsers */
+  background: linear-gradient(to right, #fec7bc 0%,#fea290 45%,#ff785d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
