@@ -1,4 +1,4 @@
 # booknetwork
 Network of most popular books from GoodReads
 
-## the data
+## the idea
