@@ -1,10 +1,6 @@
-# booknetwork
-Network of most popular books from GoodReads
-
-
-# The Idea
+# *What is the Book Network?*
 Welcome to Book Network, the network analysis project of the 3000 most popular book from GoodReads.
-We love literature and we are trying to learn about Social graphs and interactions at Technical University of Denmark so this is our final project.
+We love literature and we are studying *Social graphs and interactions* at Technical University of Denmark so this is the pinnacle of our efforts.
 
 
 The cornerstone of our analysis are the 3000 most rated books with the highest average rating on GoodReads. It is the largest website where people rate and review books. We took these books and created a connection whenever the same person rates both of the books. As the result we've got a graph where books are the nodes and edges carry the number of people who rated both of the books.
@@ -24,9 +20,7 @@ And finally we will create couple of recommendations based on the communities we
 
 # Our dataset
 We used a subset of Goodbooks-10k from Github, which contains most rated books, their user ratings and all the tags users give them. However we wanted even more information so we can delve into text analysis. Therefore we wrote a python script to download and extract book descriptions and reviews directly from Goodreads.
-In total it is around X MB of data. You can download Goodbooks-10k [here] and CSV with book descriptions and reviews [here]. If you want to see more details about how we processed and analysed our data, you can find those in the Explainer notebook [here]. 
-[add link for download]
-
+In total it is around X MB of data. You can download [Goodbooks-10k](https://github.com/zygmuntz/goodbooks-10k) and [CSV]() with book descriptions and reviews to try to play with the data. If you want to see more details about how we processed and analysed our data, you can find those in the [Explainer notebook](). 
 
 # Analysis
 Now you know everything about our idea and how we created the networks of Fans and Haters. Let's look at how we analysed them.
@@ -49,14 +43,16 @@ Then we pooled together the top 5 tags of the most connected books in the commun
 ## Reviews
 ### *"What do people like about these books?"*
 We also wanted to find another aspect what ties the communities together - how people feel about the books in the community. In case of Fan Network what are the things that people liked about the books. And as for Haters, what they disliked. 
-We tried to answer that using sentiment analysis of book reviews. We took reviews of the top 50 most connected books. But we've found out there is quite a lot of them written in different languages. So we've decided to consider only reviews in English, we used a neat library for detecting languages [ref] to do that. Why? Simply because we want to understand our word clouds, since we are all about ~~aeromancy~~ cloud interpretation. However we've got some nice stats about the language distributions within communities.
+We tried to answer that using sentiment analysis of book reviews. We took reviews of the top 50 most connected books. But we've found out there is quite a lot of them written in different languages. So we've decided to consider only reviews in English, we used a neat library for detecting languages *langdetect* to do that. Why? Simply because we want to understand our word clouds, since we are all about ~~aeromancy~~ cloud interpretation. However we've got some nice stats about the language distributions within communities.
 We proceeded to calculate mean sentiment and standart deviation to choose only the most positive and most negative reviews for the community. Then we compute TF-IDF for these reviews to find the most important words. The algorithm allows us to find frequent words, which are also uniqe for each community. And finally we make our favorite word clouds.
 [example word cloud]
 
 
 References
-https://neo4j.com/docs/graph-algorithms/current/algorithms/louvain/
-https://en.wikipedia.org/wiki/Louvain_Modularity
-https://perso.uclouvain.be/vincent.blondel/research/louvain.html
+- https://neo4j.com/docs/graph-algorithms/current/algorithms/louvain/
+- https://en.wikipedia.org/wiki/Louvain_Modularity
+- https://perso.uclouvain.be/vincent.blondel/research/louvain.html
+- https://pypi.org/project/langdetect/
+- https://github.com/zygmuntz/goodbooks-10k
 
 
