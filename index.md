@@ -4,10 +4,13 @@ Network of most popular books from GoodReads
 
 # The Idea
 Welcome to Book Network, the network analysis project of the 3000 most popular book from GoodReads.
-We love literature and we are trying to learn about ...at Technical University of Denmark and this is our final project.
+We love literature and we are trying to learn about Social graphs and interactions at Technical University of Denmark so this is our final project.
+
 
 The cornerstone of our analysis are the 3000 most rated books with the highest average rating on GoodReads. It is the largest website where people rate and review books. We took these books and created a connection whenever the same person rates both of the books. As the result we've got a graph where books are the nodes and edges carry the number of people who rated both of the books.
-This way, we've created network of Fans and network of Haters. Fans are the users who liked the books and rated them 4 or 5 stars. Haters disliked the books and gave them rating 3 or 4 stars. 
+This way, we've created network of **Fans** and network of **Haters**. 
+
+Fans are the users who liked the books and rated them 4 or 5 stars. Haters disliked the books and gave them rating 3 or 4 stars. 
 
 ## *What we want to learn?*
 - Why people like the popular books? 
