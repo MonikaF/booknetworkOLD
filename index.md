@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # What is the Book Network?
 Welcome to Book Network, the network analysis project of the 3000 most popular book from GoodReads.
 We love literature and we are studying *Social graphs and interactions* at Technical University of Denmark so this is the pinnacle of our efforts.
