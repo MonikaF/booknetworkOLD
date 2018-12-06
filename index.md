@@ -17,8 +17,10 @@ Fans are the users who liked the books and rated them 4 or 5 stars. Haters disli
 ## Recommendations
 And finally we will create couple of recommendations based on the communities we discovered. We will find the most central books and recomend you some interesting titles which you shouldn't miss out. But that's not all. We will also pick most controversial books and advise what titiles to avoid, if you don't like them.
 
+# The Network
+//todo
 
-# Our dataset
+# The data we used
 We used a subset of Goodbooks-10k from Github, which contains most rated books, their user ratings and all the tags users give them. However we wanted even more information so we can delve into text analysis. Therefore we wrote a python script to download and extract book descriptions and reviews directly from Goodreads.
 In total it is around X MB of data. You can download [Goodbooks-10k](https://github.com/zygmuntz/goodbooks-10k) and [CSV]() with book descriptions and reviews to try to play with the data. If you want to see more details about how we processed and analysed our data, you can find those in the [Explainer notebook](). 
 
@@ -47,6 +49,19 @@ We tried to answer that using sentiment analysis of book reviews. We took review
 We proceeded to calculate mean sentiment and standart deviation to choose only the most positive and most negative reviews for the community. Then we compute TF-IDF for these reviews to find the most important words. The algorithm allows us to find frequent words, which are also uniqe for each community. And finally we make our favorite word clouds.
 [example word cloud]
 
+
+# Fan Network
+//todo
+
+
+# Haters Network
+//todo
+
+# Fans vs Haters Comparison
+//todo
+
+# Recommendations
+//todo
 
 References
 - https://neo4j.com/docs/graph-algorithms/current/algorithms/louvain/
